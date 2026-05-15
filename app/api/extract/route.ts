@@ -62,7 +62,8 @@ export async function POST(req: NextRequest) {
       model: "claude-sonnet-4-20250514",
       max_tokens: 1500,
       system: SYSTEM_PROMPT,
-      tools: [{ type: "web_search_20250305" as const, name: "web_search" }],
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      tools: [{ type: "web_search_20250305", name: "web_search" }] as any,
       messages: [{ role: "user", content: userMessage }],
     });
 
