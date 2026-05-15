@@ -529,3 +529,227 @@ body::before {
   border-top: 1px solid var(--border);
   margin: 2.5rem 0;
 }
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+  animation: fadeUp 0.5s 0.05s ease both;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.6rem 1.25rem 0.75rem;
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tab-btn:hover {
+  color: var(--cream);
+}
+
+.tab-btn.active {
+  color: var(--amber);
+  border-bottom-color: var(--amber);
+}
+
+.tab-badge {
+  background: var(--amber);
+  color: var(--ink);
+  font-size: 0.65rem;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 0.1rem 0.45rem;
+  line-height: 1.4;
+}
+
+/* ── Save button (in recipe footer) ── */
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.save-btn {
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  font-family: var(--font-body), sans-serif;
+  color: var(--muted);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.save-btn:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+.save-btn.saved {
+  color: var(--amber);
+  border-color: rgba(200, 135, 58, 0.5);
+  background: rgba(200, 135, 58, 0.08);
+}
+
+/* ── Cookbook ── */
+.cookbook-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.cookbook-empty p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cookbook-empty-sub {
+  margin-top: 0.4rem;
+  font-size: 0.8rem !important;
+  opacity: 0.7;
+}
+
+.cookbook-count {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.cookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.cookbook-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body), sans-serif;
+  color: var(--cream);
+  transition: border-color 0.15s, background 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: fadeUp 0.4s ease both;
+}
+
+.cookbook-tile:hover {
+  border-color: var(--amber);
+  background: var(--surface-hover);
+}
+
+.tile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.tile-title {
+  font-family: var(--font-display), serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--cream);
+}
+
+.tile-remove {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 0.1rem 0.25rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+
+.tile-remove:hover {
+  color: var(--red);
+}
+
+.tile-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.tile-meta span {
+  font-size: 0.7rem;
+  background: rgba(200, 135, 58, 0.1);
+  border: 1px solid rgba(200, 135, 58, 0.2);
+  color: var(--amber);
+  border-radius: 20px;
+  padding: 0.1rem 0.5rem;
+}
+
+.tile-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.tile-ing {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.tile-time {
+  font-size: 0.7rem;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+/* ── Back button (cookbook → recipe detail) ── */
+.back-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0 0 1.25rem;
+  display: block;
+  transition: color 0.15s;
+}
+
+.back-btn:hover {
+  color: var(--cream);
+}
