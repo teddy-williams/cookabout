@@ -34,18 +34,6 @@ Paste a recipe URL or YouTube video link and Cookable uses AI to fetch the page,
 
 ---
 
-## How It Works
-
-1. User pastes a URL into the input
-2. The frontend calls `/api/extract` with the URL
-3. The API route sends the URL to Claude (`claude-sonnet-4`) with the **web search tool** enabled
-4. Claude fetches the page (or YouTube video details), identifies the recipe, and returns structured JSON
-5. The frontend renders the recipe card with ingredients, steps, timings, and notes
-
-The API key lives server-side only — it is never exposed to the browser.
-
----
-
 ## Roadmap
 
 - [x] Recipe extraction from any URL
