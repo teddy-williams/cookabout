@@ -6,7 +6,6 @@ Paste a recipe URL or YouTube video link and Cookable uses AI to fetch the page,
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
-![Anthropic](https://img.shields.io/badge/Powered%20by-Claude-orange?style=flat-square)
 ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)
 
 ---
@@ -27,7 +26,6 @@ Paste a recipe URL or YouTube video link and Cookable uses AI to fetch the page,
 |---|---|
 | Framework | [Next.js 14](https://nextjs.org) (App Router) |
 | Language | TypeScript |
-| AI | [Anthropic Claude](https://anthropic.com) (`claude-sonnet-4`) with web search |
 | Styling | Vanilla CSS (no UI library) |
 | Storage | `localStorage` (no database, no login) |
 | Deployment | [Vercel](https://vercel.com) |
