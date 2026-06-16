@@ -80,7 +80,7 @@ async function fetchYouTube(url: string): Promise<string> {
     .get()
     .join("\n");
 
-  const descMatch = scriptContent.match(/"shortDescription":"(.*?)(?<!\\)"/s);
+  const descMatch = scriptContent.match(/"shortDescription":"(.*?)"/);
   const description = descMatch
     ? descMatch[1].replace(/\\n/g, "\n").replace(/\\"/g, '"').slice(0, 4000)
     : metaDesc;
